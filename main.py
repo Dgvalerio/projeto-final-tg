@@ -50,4 +50,4 @@ if __name__ == '__main__':
     print('Quiz:')
     print(game)
     print('Resolved:')
-    main(get_random_game())
+    main(game)
