@@ -1,4 +1,5 @@
 import networkx as nx
+from welsh_powell import welsh_powell
 
 nodes = [['00', '01', '02', '03', '04', '05', '06', '07', '08'],
          ['10', '11', '12', '13', '14', '15', '16', '17', '18'],
@@ -18,17 +19,6 @@ square = [['00', '01', '02', '10', '11', '12', '20', '21', '22'],
           ['60', '61', '62', '70', '71', '72', '80', '81', '82'],
           ['63', '64', '65', '73', '74', '75', '83', '84', '85'],
           ['66', '67', '68', '76', '77', '78', '86', '87', '88']]
-
-
-def welsh_powell(g):
-    for node in g._node:
-        if not g._node[node]['status']:
-            for e in g.neighbors(node):
-                if g._node[e]['status']:
-                    try:
-                        g._node[node]['color'].remove(g._node[e]['color'])
-                    except:
-                        pass
 
 
 def update(g):
