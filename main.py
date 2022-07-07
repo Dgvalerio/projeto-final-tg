@@ -2,7 +2,7 @@ import networkx as nx
 from welsh_powell import welsh_powell
 from lists import nodes, square
 from checks import engage, update
-from adapter import sudoku_adapter
+from adapter import get_random_game
 
 
 def main(sudoku):
@@ -46,5 +46,4 @@ def main(sudoku):
 
 
 if __name__ == '__main__':
-    game = sudoku_adapter('examples/text.txt')
-    main(game)
+    main(get_random_game())
