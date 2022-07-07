@@ -46,4 +46,8 @@ def main(sudoku):
 
 
 if __name__ == '__main__':
+    game = get_random_game()
+    print('Quiz:')
+    print(game)
+    print('Resolved:')
     main(get_random_game())
